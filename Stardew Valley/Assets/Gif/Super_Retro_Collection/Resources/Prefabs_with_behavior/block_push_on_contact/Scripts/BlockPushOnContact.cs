@@ -16,9 +16,9 @@ public class BlockPushOnContact : MonoBehaviour
     private void Update()
     {
         // Gradually reduce the velocity over time (simulate friction)
-        if (rb.velocity.magnitude > 0)
+        if (rb.linearVelocity.magnitude > 0)
         {
-            rb.velocity = Vector2.Lerp(rb.velocity, Vector2.zero, friction * Time.deltaTime);
+            rb.linearVelocity = Vector2.Lerp(rb.linearVelocity, Vector2.zero, friction * Time.deltaTime);
         }
         else
         {
